@@ -45,6 +45,8 @@ Getting into camera is documented very well by the links at the bottom.
 
 NOTE: If you are not sure that this will work for your camera, cross check scripts in your dumped camera files and files inside rootfs folder of this repository. If they are almost same then you can proceed for quick install
 
+0 - Get your /etc/jffs2/isp_xxx.conf file. And save it somewhere safe. It is needed in step 5
+
 1- Download the update file in Releases and copy it to sdcard. Create a folder named `update` and place update.tar inside that folder.
 
 2- Restart the camera, you will hear 'Firmware Update Started' warning and beeping afterwards.
