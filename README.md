@@ -17,6 +17,9 @@ There are
 - PTZ Daemon to manage Camera Movement
 - And a WEBUI to control PTZ and LED lights
 
+
+After new firmware, you will have full telnet access. As long as you are connected to wifi you dont have to go into hardware mode.
+
 ## Before Beginning
 
 Plug your camera to power , insert sdcard and connect it to whatever software it came with. Most probably YİIOT or such.
@@ -78,6 +81,16 @@ After running software you should be seeing your stream using
 ffplay "rtsp://IP:554/vs0" and vs1
 
 ![image](https://github.com/MuhammedKalkan/E27-Camera-Hack-Anyka3918/assets/19736494/aebebf78-db28-423f-a360-02d6c11f5fe1)
+
+## Custom Scripting
+
+In order to make scripting easy and without flashing, i have added a method.
+
+If you create /etc/jffs2/custom.sh script , camera will run this on start. It wont start any apps.
+
+Wifi will run before this custom script so avoid messing with wifi here, or you lock yourself out your camera (No telnet)
+
+Just echo something if you want to try it, but i suggest dont do anything unless you know how to recover in lockout mode.(Meaning hardware connection)
 
 ## Settings Update
 
