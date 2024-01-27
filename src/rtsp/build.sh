@@ -1,0 +1,2 @@
+export PATH=$PATH:/opt/arm-anykav200-crosstool/usr/bin
+arm-anykav200-linux-uclibcgnueabi-gcc ak_rtsp_demo.c -std=c99 -D_POSIX_C_SOURCE=199309L  -Iinclude/libplat/include  -Iinclude/libmpi/include  -Llib   -lplat_vi -lplat_thread -lakispsdk  -lplat_common -lakuio -lplat_vpss -lplat_ipcsrv  -lakstreamenc -lmpi_venc -lapp_rtsp  -lapp_net -lplat_ai -lakae -lplat_drv  -lmpi_aenc -lakmedia  -lmpi_aed -lakaudiocodec -o rtsp.out

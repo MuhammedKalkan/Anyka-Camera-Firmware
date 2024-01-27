@@ -1,0 +1,46 @@
+#!/bin/sh
+
+#print kernel error default
+echo 4 > /proc/sys/kernel/printk
+
+# mount usr file-system. 
+/bin/mount -t squashfs /dev/mtdblock5 /usr
+# mount jffs2 file-system. 
+/bin/mount -t jffs2 /dev/mtdblock6 /etc/jffs2
+# note: can't recommend running other app before `mount` command.
+
+#start ftp server, dir=root r/w, -t 600s(timeout)
+/usr/bin/tcpsvd 0 21 ftpd -w / -t 600 &
+
+#start syslogd & klogd, log rotated 3 files(200KB) to /var/log/messages
+syslogd -D -n -O /var/log/messages -s 200 -b 3 & # -l prio
+klogd -n & # -c prio
+
+#create ramdisk
+dd if=/dev/zero of=/tmp/zero bs=512 count=200
+losetup /dev/loop0 /tmp/zero
+mkfs.vfat /dev/loop0
+mkdir /tmp/ramdisk
+mount /dev/loop0 /tmp/ramdisk
+
+ifconfig lo 127.0.0.1
+
+#load camera module
+#/usr/sbin/camera.sh setup
+
+if test -d /mnt/update ;then
+    /usr/sbin/update.sh
+else
+    echo "No Update file found"
+    /usr/sbin/wifi_run.sh &
+    /etc/jffs2/custom.sh &
+fi
+
+
+
+dmesg > /tmp/start_message
+#start system service
+#/usr/sbin/service.sh start &
+
+## set min free reserve bytes
+echo 2048 > /proc/sys/vm/min_free_kbytes

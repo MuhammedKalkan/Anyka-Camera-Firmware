@@ -1,0 +1,102 @@
+#!/bin/sh
+#
+echo "Content-type: text/html"
+echo ""
+command=`echo "$QUERY_STRING" | awk '{split($0,array,"&")} END{print array[1]}' | awk '{split($0,array,"=")} END{print array[2]}'`
+date=`date`
+ipadd=`ip route get 1 | awk '{print $NF;exit}'`
+uptime=`uptime`
+
+
+cat <<EOT
+<!DOCTYPE html>
+<html>
+<head>
+<title>Camera - WebUI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-size: 100%;
+    font-family: Arial, Verdana, sans-serif;
+}
+</style>
+</head>
+<body>
+<div>
+
+
+<br />
+<br />
+<button onclick="window.location.href='webui?command=ledon'" id="ledon">LED On </button>
+<br />
+<button onclick="window.location.href='webui?command=ledoff'" id="ledoff">LED Off</button>
+<br />
+<br />
+</div>
+<table>
+    <tr align="center">
+        <td><button onclick="window.location.href='webui?command=ptzrd'">&#11017;</button></td>
+        <td><button onclick="window.location.href='webui?command=ptzd'">&#11014;</button></td>
+        <td><button onclick="window.location.href='webui?command=ptzld'">&#11016;</button></td>
+    </tr>
+    <tr align="center">
+        <td><button onclick="window.location.href='webui?command=ptzr'">&#11013;</button></td>
+        <td>PTZ</td>
+        <td><button onclick="window.location.href='webui?command=ptzl'">&#10145;</button></td>
+    </tr>
+    <tr align="center">
+        <td><button onclick="window.location.href='webui?command=ptzru'">&#11019;</button></td>
+        <td><button onclick="window.location.href='webui?command=ptzu'">&#11015;</button></td>
+        <td><button onclick="window.location.href='webui?command=ptzlu'">&#11018;</button></td>
+    </tr>
+</table>
+<br />
+Date - $date
+<br />
+IP Address - $ipadd
+<br />
+Uptime - $uptime
+<br />
+<br />
+
+
+</body>
+</html>
+EOT
+
+
+ if [ "$command" = "ledon" ]; then
+  echo "1" > /sys/user-gpio/WHITE_LED
+ fi
+ if [ "$command" = "ledoff" ]; then
+  echo "0" > /sys/user-gpio/WHITE_LED
+ fi
+
+ if [ "$command" = "ptzlu" ]; then
+  echo "left" > /tmp/ptz.daemon
+  echo "up" > /tmp/ptz.daemon
+ fi
+ if [ "$command" = "ptzu" ]; then
+  echo "up" > /tmp/ptz.daemon
+ fi
+  if [ "$command" = "ptzru" ]; then
+  echo "right" > /tmp/ptz.daemon
+  echo "up" > /tmp/ptz.daemon
+ fi
+  if [ "$command" = "ptzld" ]; then
+  echo "left" > /tmp/ptz.daemon
+  echo "down" > /tmp/ptz.daemon
+ fi
+ if [ "$command" = "ptzd" ]; then
+  echo "down" > /tmp/ptz.daemon
+ fi
+  if [ "$command" = "ptzrd" ]; then
+  echo "right" > /tmp/ptz.daemon
+  echo "down" > /tmp/ptz.daemon
+ fi
+ if [ "$command" = "ptzl" ]; then
+  echo "left" > /tmp/ptz.daemon
+ fi
+ if [ "$command" = "ptzr" ]; then
+  echo "right" > /tmp/ptz.daemon
+ fi

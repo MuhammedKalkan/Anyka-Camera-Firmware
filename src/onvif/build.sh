@@ -1,0 +1,2 @@
+export PATH=$PATH:/opt/arm-anykav200-crosstool/usr/bin
+arm-anykav200-linux-uclibcgnueabi-gcc *.c -std=c99 -D_GNU_SOURCE  -Iinclude/libplat  -Iinclude/libmpi  -Iinclude/akae  -Iinclude/libapp  -Iinclude/onvif -Llib   -lplat_vi -lplat_thread -lakispsdk  -lplat_common -lakuio -lplat_vpss -lplat_ipcsrv  -lakstreamenc -lmpi_venc   -lapp_net -lplat_ai -lakae   -lmpi_aenc -lakaudiofilter_kern -lakmedia  -lmpi_aed -lakaudiocodec -lpthread  -lonvif -o onvif.out
