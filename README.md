@@ -47,7 +47,7 @@ Getting into camera is documented very well by the links at the bottom.
 
 ## Quick Install
 
-NOTE: If you are not sure that this will work for your camera, cross check scripts in your dumped camera files and files inside rootfs folder of this repository. If they are almost same then you can proceed for quick install
+NOTE: If your camera is not lightbulb variant, cross check scripts in your dumped camera files and files inside rootfs folder of this repository. If they are almost same then you can proceed for quick install
 
 0 - Get your /etc/jffs2/isp_xxx.conf file. And save it somewhere safe. It is needed in step 5
 
