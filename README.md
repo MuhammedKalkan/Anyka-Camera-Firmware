@@ -16,7 +16,7 @@ There are
 - RTSP application which provides AUDIO,VIDEO stream, Auto DAY/NIGHT switching
 - PTZ Daemon to manage Camera Movement
 - And a WEBUI to control PTZ and LED lights
-- Auidible wifi connection status
+- Audible wifi connection status
 
 
 After new firmware, you will have full telnet access. As long as you are connected to wifi you dont have to go into hardware mode.
