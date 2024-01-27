@@ -14,7 +14,7 @@ But with this repo , you can turn them into a network video recoding camera
 
 There are
 - RTSP application which provides AUDIO,VIDEO stream, Auto DAY/NIGHT switching
-- PTZ Daemon to manage Camera Movement
+- PTZ Daemon to manage Camera Movement. Also storing ptz position
 - And a WEBUI to control PTZ and LED lights
 - Audible wifi connection status
 
