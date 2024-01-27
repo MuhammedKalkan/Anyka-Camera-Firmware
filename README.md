@@ -96,6 +96,27 @@ Just echo something if you want to try it, but i suggest dont do anything unless
 
 If you want to update wifi settings,change etc/jffs2/anyka_conf.ini file and place it in update folder sdcard. Restart the camera and settings will be updated. This is useful when you want to change wifi settings
 
+## Creating Custom Update File
+
+If you have a dump you can create your own update file
+
+Form rootfs folder, copy contained files and folders to your dumps.
+
+There are two different parts.
+
+1- rootfs - bin and etc will go into this one and pack it with
+
+`mksquashfs squashfs-root root.sqsh4 -comp xz -Xdict-size 100%`
+
+2- usr   - custom wil lgo into this one and pack it with
+
+`mksquashfs squashfs-usr usr.sqsh4 -comp xz -Xdict-size 100%`
+
+Then with fw_version file pack them . You can also pack seperately(make sure it is above your current cam version or it wont update)
+
+`tar cvf update.tar  usr.sqsh4   fw_version`
+
+
 ## Other Anyka Based Cameras (This part will need some sort of expertise)
 
 - Connect to telnet using instructions above
