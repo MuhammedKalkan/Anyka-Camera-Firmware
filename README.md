@@ -81,6 +81,10 @@ After running software you should be seeing your stream using
 
 ffplay "rtsp://IP:554/vs0" and vs1
 
+or install VLC on snap. Regular ubuntu VLC does not have rtsp support.
+
+`sudo snap install vlc` and then play it as newtwork stream
+
 ![image](https://github.com/MuhammedKalkan/E27-Camera-Hack-Anyka3918/assets/19736494/aebebf78-db28-423f-a360-02d6c11f5fe1)
 
 ## Custom Scripting
