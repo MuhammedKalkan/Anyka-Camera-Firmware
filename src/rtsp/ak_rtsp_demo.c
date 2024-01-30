@@ -298,14 +298,14 @@ int ak_misc_set_video_day_night(void *vi_handle, int ir_val, int day_level)
 	int ret = AK_FAILED;
 	if (day_val) {
 		ak_print_notice("now set to day\n");
-		camera_set_ir(!ir_val, IRCUT_A_FILE_NAME);			
+		camera_set_ir(1, IRCUT_A_FILE_NAME);			
 		ret = ak_vi_switch_mode(vi_handle, VI_MODE_DAY);
 		camera_set_ir(!ir_val, IRLED_FILE_NAME);
 	} else {
 		ak_print_notice("now set to night\n");
 		camera_set_ir(!ir_val, IRLED_FILE_NAME);
 		ret = ak_vi_switch_mode(vi_handle, VI_MODE_NIGHT);
-		camera_set_ir(!ir_val, IRCUT_A_FILE_NAME);	
+		camera_set_ir(0, IRCUT_A_FILE_NAME);	
 	}
 
 	ak_sleep_ms(300);

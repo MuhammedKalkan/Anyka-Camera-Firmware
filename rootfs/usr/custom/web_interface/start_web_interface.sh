@@ -20,8 +20,6 @@ check_process_health()
   #check_process_health
   restart_process
   sleep 5
-  /usr/custom/ptz_daemon & 
-   sleep 5
-  echo "init" > /tmp/ptz.daemon &
+  /usr/custom/ptz_daemon &
  
 #done
