@@ -23,7 +23,7 @@ After new firmware, you will have full telnet access. As long as you are connect
 
 There are two methods to run custom apps on camera
 
-# 1- SDCARD METHOD
+# 1- SDCARD Method
 
 This method does not alter your camera software and runs on SD card.
 
