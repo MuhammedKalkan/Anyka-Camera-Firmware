@@ -25,6 +25,8 @@ Camera Sensors included in this repo are gc1084,gc1054, gc1034, H62 , H63. If yo
 
 Wifi Sensors included in this repo are rtl8188fu,atbm603x_wifi_usb, ssv6x5x. If yours is different , use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
 
+MCU is AK3918v200EN080, if you have different MCU, try to run repo apps. If they dont work, find your toolchain and compile for your MCU. I ve seen v300 and v330 Anyka MCUs are used. So learn your MCU type
+
 There are two methods to run custom apps on camera.
 
 # 1- SDCARD Method
