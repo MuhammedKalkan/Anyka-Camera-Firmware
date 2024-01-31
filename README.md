@@ -21,11 +21,7 @@ There are
 
 After new firmware, you will have full telnet access. As long as you are connected to wifi you dont have to go into hardware mode.
 
-Camera Sensors included in this repo are gc1084,gc1054, gc1034, H62 , H63. If yours is different (check /usr/modules and look for .ko files), use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
-
-Wifi Sensors included in this repo are rtl8188fu,atbm603x_wifi_usb, ssv6x5x. If yours is different  (check /usr/modules and look for .ko files), use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
-
-MCU is AK3918v200EN080, if you have different MCU, try to run repo apps. If they dont work, find your toolchain and compile for your MCU. I ve seen v300 and v330 Anyka MCUs are used. So learn your MCU type
+Developed on a platform which MCU is AK3918v200EN080, if you have different MCU, try to run repo apps. If they dont work, find your toolchain and compile for your MCU. I ve seen v300 and v330 Anyka MCUs are used. So learn your MCU type
 
 There are two methods to run custom apps on camera.
 
@@ -46,6 +42,11 @@ But make sure you try SD Card method first and see apps and scripts are working 
 Then you can create your custom firmware or if you are sure use the one in 
 
 Releases
+
+Camera Sensors included in this repo are gc1084,gc1054, gc1034, H62 , H63. If yours is different (check /usr/modules and look for .ko files), use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
+
+Wifi Sensors included in this repo are rtl8188fu,atbm603x_wifi_usb, ssv6x5x. If yours is different  (check /usr/modules and look for .ko files), use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
+
 
 ## Before Beginning
 
