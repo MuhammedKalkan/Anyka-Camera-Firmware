@@ -21,7 +21,7 @@ There are
 
 After new firmware, you will have full telnet access. As long as you are connected to wifi you dont have to go into hardware mode.
 
-Sensors included in this repo are gc1054, sc1345, H62 , H63. If yours is different , use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
+Sensors included in this repo are gc1084,gc1054, gc1034, H62 , H63. If yours is different , use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
 
 There are two methods to run custom apps on camera.
 
