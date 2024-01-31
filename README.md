@@ -47,6 +47,7 @@ Camera Sensors included in this repo are gc1084,gc1054, gc1034, H62 , H63. If yo
 
 Wifi Sensors included in this repo are rtl8188fu,atbm603x_wifi_usb, ssv6x5x. If yours is different  (check /usr/modules and look for .ko files), use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
 
+Also note that anyka_ipc app wont be on flash. There is just now enough room. You can use it via sdcard if you like later
 
 ## Before Beginning
 
