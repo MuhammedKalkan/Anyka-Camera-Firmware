@@ -21,6 +21,26 @@ There are
 
 After new firmware, you will have full telnet access. As long as you are connected to wifi you dont have to go into hardware mode.
 
+There are two methods to run custom apps on camera
+
+# 1- SDCARD METHOD
+
+This method does not alter your camera software and runs on SD card.
+
+Simply copy Factory folder to your SD Card and reboot the camera.
+
+If you have SD card inserted into your camera, you can copy that folder through FTP. This is good if your camera is out of easy reach
+
+# 2- Overwriting Camera Software
+
+This is good if you dont want to buy and SD card for each of your cameras.
+
+But make sure you try SD Card method first and see apps and scripts are working for you.
+
+Then you can create your custom firmware or if you are sure use the one in 
+
+Releases
+
 ## Before Beginning
 
 Plug your camera to power , insert sdcard and connect it to whatever software it came with. Most probably YİIOT or such.
