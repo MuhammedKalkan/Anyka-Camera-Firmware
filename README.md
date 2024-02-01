@@ -39,15 +39,13 @@ This is good if you dont want to buy an SD card for each of your cameras.
 
 But make sure you try SD Card method first and see apps and scripts are working for you.
 
-Then you can create your custom firmware or if you are sure use the one in 
-
-Releases
+Then you can create your custom firmware or if you are sure that you dont have any different drivers as listed below use the one in Releases
 
 Camera Sensors included in this repo are gc1084,gc1054, gc1034, H62 , H63. If yours is different (check /usr/modules and look for .ko files), use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
 
 Wifi Sensors included in this repo are rtl8188fu,atbm603x_wifi_usb, ssv6x5x. If yours is different  (check /usr/modules and look for .ko files), use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
 
-Also note that anyka_ipc app wont be on flash. There is just now enough room. You can use it via sdcard if you like later
+Also note that anyka_ipc app wont be on flash. There is just not enough room. You can use it via sdcard if you like later
 
 ## Before Beginning
 
