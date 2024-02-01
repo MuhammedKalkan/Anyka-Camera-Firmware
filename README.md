@@ -55,7 +55,16 @@ Just connect to wifi and see your camera is working. View it on your vendor app 
   
 You should backup your camera software incase any other unwanted situations. Steps after this one will modify your camera software permanently ,thus use at your own risk
 
-**Most important folders are /usr and /etc/jffs2 . I advise  you to get these at least**. Also get /var/log/messages file. This will be of help
+
+
+================
+
+**Most important folders are /usr and /etc/jffs2 . I advise  you to get these at least**. 
+
+================
+
+
+Also get /var/log/messages file. This will be of help
 
 Now there are two ways to get files inside camera 
 
