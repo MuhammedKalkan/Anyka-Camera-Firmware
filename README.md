@@ -41,12 +41,14 @@ But make sure you try SD Card method first and see apps and scripts are working 
 
 Then you can create your custom firmware with your drivers or if you are sure that you dont have any different drivers as listed below use the one in Releases.
 
-If you happen to have different drivers, your camera will not work, even if you tried SDcard method and all worked flawlessly.So check your /usr/modules folder. And look for *.ko files.
-If you see different names, open an issue and attach your original /usr /etc/init.d and /etc/jffs2 folders. And wait for response
+If you happen to have different drivers, your camera will not work, even if you tried SDcard method and all worked flawlessly.
+
 
 Camera Sensors included in this repo are gc1084,gc1054, gc1034, H62 , H63. If yours is different (check /usr/modules and look for .ko files), use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
 
 Wifi Sensors included in this repo are rtl8188fu,atbm603x_wifi_usb, ssv6x5x. If yours is different  (check /usr/modules and look for .ko files), use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
+
+If you see different .ko file names, open an issue and attach your original /usr /etc/init.d and /etc/jffs2 folders. And wait for response
 
 Also note that anyka_ipc app wont be on flash. There is just not enough room. You can use it via sdcard if you like later
 
