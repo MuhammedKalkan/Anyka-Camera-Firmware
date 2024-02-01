@@ -39,7 +39,9 @@ This is good if you dont want to buy an SD card for each of your cameras.
 
 But make sure you try SD Card method first and see apps and scripts are working for you.
 
-Then you can create your custom firmware or if you are sure that you dont have any different drivers as listed below use the one in Releases
+Then you can create your custom firmware with your drivers or if you are sure that you dont have any different drivers as listed below use the one in Releases.
+
+If you happen to have different drivers, your camera will not work, even if you tried SDcard method and all worked flawlessly.
 
 Camera Sensors included in this repo are gc1084,gc1054, gc1034, H62 , H63. If yours is different (check /usr/modules and look for .ko files), use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
 
@@ -76,7 +78,14 @@ Now there are two ways to get files inside camera
 
 2 - You can modify /etc/jffs2/time_zone.sh file and add `telnetd &` at the end of file, and restart it. After restart you will have telnet enabled
   
-  Connect camera via `telnet cameraip` and then dump all 6 partitions using `cat /dev/mtd0 > mtd0.bin`. Move these dumps to your local pc
+  Connect camera via `telnet cameraip` and then dump all 6 partitions using 
+  `cat /dev/mtd0 > mtd0.bin`
+  .
+  .
+  .
+  `cat /dev/mtd6 > mtd6.bin`
+  
+  Move these dumps to your local pc. If your partitions are more or less.figure that out in /dev/mtd*. Just dump them all.
 
 Getting into camera is documented very well by the links at the bottom.
 
