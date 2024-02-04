@@ -63,6 +63,7 @@ IP Address - $ipadd
 <br />
 Uptime - $uptime
 <br />
+Command - $command - $aacname
 <br />
 
 

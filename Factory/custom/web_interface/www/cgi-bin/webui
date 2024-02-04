@@ -3,10 +3,14 @@
 echo "Content-type: text/html"
 echo ""
 command=`echo "$QUERY_STRING" | awk '{split($0,array,"&")} END{print array[1]}' | awk '{split($0,array,"=")} END{print array[2]}'`
+aacname=`echo "$command" | awk '{split($0,array,"%")} END{print array[2]}'`
 date=`date`
 ipadd=`ip route get 1 | awk '{print $NF;exit}'`
 uptime=`uptime`
 
+if [ $aacname? != "" ];then
+	command=`echo "$command" | awk '{split($0,array,"%")} END{print array[1]}'`	
+fi
 
 cat <<EOT
 <!DOCTYPE html>
@@ -30,6 +34,8 @@ body {
 <button onclick="window.location.href='webui?command=ledon'" id="ledon">LED On </button>
 <br />
 <button onclick="window.location.href='webui?command=ledoff'" id="ledoff">LED Off</button>
+<br />
+<br />
 <br />
 <br />
 </div>
@@ -57,6 +63,7 @@ IP Address - $ipadd
 <br />
 Uptime - $uptime
 <br />
+Command - $command - $aacname
 <br />
 
 
@@ -65,6 +72,10 @@ Uptime - $uptime
 EOT
 
 
+ if [ "$command" = "play" ]; then
+  ak_adec_demo 16000 2 aac /tmp/$aacname > /dev/null 2>&1
+  rm -f /tmp/$aacname
+ fi
  if [ "$command" = "ledon" ]; then
   echo "1" > /sys/user-gpio/WHITE_LED
  fi
