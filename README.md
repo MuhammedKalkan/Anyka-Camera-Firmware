@@ -21,7 +21,9 @@ There are
 
 After new firmware, you will have full telnet access. As long as you are connected to wifi you dont have to go into hardware mode.
 
-There are two methods to run custom apps on camera
+Developed on a platform which MCU is AK3918v200EN080, if you have different MCU, try to run repo apps. If they dont work, find your toolchain and compile for your MCU. I ve seen v300 and v330 Anyka MCUs are used. So learn your MCU type
+
+There are two methods to run custom apps on camera.
 
 # 1- SDCARD Method
 
@@ -37,9 +39,18 @@ This is good if you dont want to buy an SD card for each of your cameras.
 
 But make sure you try SD Card method first and see apps and scripts are working for you.
 
-Then you can create your custom firmware or if you are sure use the one in 
+Then you can create your custom firmware with your drivers or if you are sure that you dont have any different drivers as listed below use the one in Releases.
 
-Releases
+If you happen to have different drivers, your camera will not work, even if you tried SDcard method and all worked flawlessly.
+
+
+Camera Sensors included in this repo are gc1084,gc1054, gc1034, H62 , H63. If yours is different (check /usr/modules and look for .ko files), use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
+
+Wifi Sensors included in this repo are rtl8188fu,atbm603x_wifi_usb, ssv6x5x. If yours is different  (check /usr/modules and look for .ko files), use your own drivers . Look at [here](https://github.com/MuhammedKalkan/Anyka-Camera-Firmware?tab=readme-ov-file#different-hardware)
+
+If you see different .ko file names, open an issue and attach your original /usr /etc/init.d and /etc/jffs2 folders. And wait for response
+
+Also note that anyka_ipc app wont be on flash. There is just not enough room. You can use it via sdcard if you like later
 
 ## Before Beginning
 
@@ -49,7 +60,16 @@ Just connect to wifi and see your camera is working. View it on your vendor app 
   
 You should backup your camera software incase any other unwanted situations. Steps after this one will modify your camera software permanently ,thus use at your own risk
 
-Most important folders are /usr and /etc/jffs2 . I advise  you to get these at least. Also get /var/log/messages file. This will be of help
+
+
+================
+
+**Most important folders are /usr and /etc/jffs2 . I advise  you to get these at least**. 
+
+================
+
+
+Also get /var/log/messages file. This will be of help
 
 Now there are two ways to get files inside camera 
 
@@ -61,7 +81,14 @@ Now there are two ways to get files inside camera
 
 2 - You can modify /etc/jffs2/time_zone.sh file and add `telnetd &` at the end of file, and restart it. After restart you will have telnet enabled
   
-  Connect camera via `telnet cameraip` and then dump all 6 partitions using `cat /dev/mtd0 > mtd0.bin`. Move these dumps to your local pc
+  Connect camera via `telnet cameraip` and then dump all 6 partitions using 
+  `cat /dev/mtd0 > mtd0.bin`
+  .
+  .
+  .
+  `cat /dev/mtd6 > mtd6.bin`
+  
+  Move these dumps to your local pc. If your partitions are more or less.figure that out in /dev/mtd*. Just dump them all.
 
 Getting into camera is documented very well by the links at the bottom.
 
