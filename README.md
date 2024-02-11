@@ -180,8 +180,6 @@ Then with fw_version file pack them . You can also pack seperately(make sure it 
   1- If it works , build your usr and rootfs and write them to flash
   2- If not, try to compile source and make it work somehow. Your camera must be different
 
-For all these steps Gerge documented very well, you should go read it . Link is at the bottom
-
 ## Different Hardware
 
 Normally these cameras come with many different Camera Sensor / Wifi Adapter and CPU
