@@ -17,6 +17,7 @@ There are
 - PTZ Daemon to manage Camera Movement. Also storing ptz position
 - And a WEBUI to control PTZ and LED lights
 - Audible wifi connection status
+- Daemon to check network and rtsp status, restart if needed
 
 
 After new firmware, you will have full telnet access. As long as you are connected to wifi you dont have to go into hardware mode.
