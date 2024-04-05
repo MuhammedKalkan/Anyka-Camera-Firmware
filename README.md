@@ -206,6 +206,6 @@ https://github.com/ricardojlrufino/anyka_v380ipcam_experiments
 
 https://gitea.raspiweb.com/Gerge/Anyka_ak3918_hacking_journey
 
-https://github.com/e27-camera-hack/E27-Camera-Hack/discussions/1
+
 
 
