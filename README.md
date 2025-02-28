@@ -1,8 +1,8 @@
 # Anyka-Camera-Firmware
 
 
-![190591214-fce64616-8f5d-40e2-b1f2-7ab6d3802d3b](https://github.com/MuhammedKalkan/E27-Camera-Hack-Anyka3918/assets/19736494/84c04be3-5052-445e-8a76-39865668989a)
-![222040166-b6145183-1f35-4915-a977-f99d149d1128](https://github.com/MuhammedKalkan/E27-Lightbulb-Camera-Hack/assets/19736494/8d110c89-1de7-4595-9225-d89119ab2856)
+![296179109-84c04be3-5052-445e-8a76-39865668989a](https://github.com/user-attachments/assets/293939b6-6a93-491c-bee3-4f25dc9262fd)
+![296247365-8d110c89-1de7-4595-9225-d89119ab2856](https://github.com/user-attachments/assets/d60caff8-3413-479a-b534-25606e0d964f)
 
 
 This repo contains firmware applications to use with Anyka based cameras. While this software is developed and tested spesifically on E27 bulb cameras.
@@ -133,7 +133,8 @@ or install VLC on snap. Regular ubuntu VLC does not have rtsp support.
 
 `sudo snap install vlc` and then play it as newtwork stream
 
-![image](https://github.com/MuhammedKalkan/E27-Camera-Hack-Anyka3918/assets/19736494/aebebf78-db28-423f-a360-02d6c11f5fe1)
+![296181423-aebebf78-db28-423f-a360-02d6c11f5fe1](https://github.com/user-attachments/assets/0fcf88d6-cbd5-484e-a683-977566508686)
+
 
 ## Custom Scripting
 
