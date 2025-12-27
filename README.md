@@ -207,6 +207,23 @@ https://github.com/ricardojlrufino/anyka_v380ipcam_experiments
 
 https://gitea.raspiweb.com/Gerge/Anyka_ak3918_hacking_journey
 
+## Security Note
+
+⚠️ **IMPORTANT SECURITY WARNING**: This hardware (YI IOT CB201 and similar Anyka-based cameras) comes with **default FTP credentials enabled** in the factory firmware. The FTP port is open by default, allowing unauthorized remote access to the device.
+
+**Default Credentials:**
+- Username: root
+- Password: yunyi666
+- Port: FTP (21)
+
+**If you are using a device with this hardware:**
+1. **IMMEDIATELY change the default root password** to a strong, unique password
+2. **Disable FTP** if you do not need remote file access
+3. **Use firewall rules** to restrict access to the device's network ports
+4. **Update to the latest firmware** as soon as possible
+
+Default credentials vulnerability is a critical security issue. Failing to secure your device immediately could result in unauthorized access, data theft, or device compromise.
+
 
 
 
